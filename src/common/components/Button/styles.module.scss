@@ -1,0 +1,41 @@
+@import '../../../variables/colors';
+@import '../../../variables/text';
+@import '../../../variables/screen-sizes';
+
+.button {
+  border: none;
+  border-radius: 4px;
+  background-color: $blue;
+  color: white;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+.active {
+  background-color: $blue-dark;
+}
+
+.disabled {
+  pointer-events: none;
+  background-color: $blue-dark;
+}
+
+.button:hover {
+  background-color: $blue-dark;
+}
+
+@media (max-width: $tablet-medium) {
+  .button {
+    padding: 5px 10px;
+    margin: 0 3px;
+    min-width: 30px;
+  }
+}
+
+@media (max-width: $phone) {
+  .button {
+    font-size: $font-size-small;
+  }
+}

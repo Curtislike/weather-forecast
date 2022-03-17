@@ -1,0 +1,38 @@
+@import '../../../variables/colors';
+@import '../../../variables/text';
+@import '../../../variables/screen-sizes';
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -120%;
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  background: $blue-background;
+  padding-top: 60px;
+  transition: 0.6s;
+  z-index: 1;
+  .closeBtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: $grey-links;
+    cursor: pointer;
+  }
+}
+
+.activeSidebar {
+  right: 0;
+  transition: 0.6s;
+  display: block;
+}
+
+@media (max-width: $tablet-medium) {
+  .sidebar {
+    width: 100%;
+  }
+}

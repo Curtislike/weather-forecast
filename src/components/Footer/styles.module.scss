@@ -1,0 +1,24 @@
+@import '../../variables/colors';
+@import '../../variables/text';
+@import '../../variables/mixins';
+@import '../../variables/screen-sizes';
+
+.footer {
+  background-color: $blue-dark;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  @include flex-center;
+  .copyright {
+    font-size: $font-size-small;
+    color: $white;
+  }
+}
+
+@media (max-width: $tablet-small) {
+  .footer {
+    height: 35px;
+  }
+}

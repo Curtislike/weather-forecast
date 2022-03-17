@@ -1,0 +1,23 @@
+@import '../../../../../../variables/colors';
+@import '../../../../../../variables/screen-sizes';
+
+input {
+  border-radius: 3px;
+  border-color: $blue;
+  padding: 5px;
+  margin: 0 5px;
+}
+
+.coordinates,
+.zip {
+  width: 93px;
+}
+
+@media (max-width: $tablet-small) {
+  .coordinates,
+  .zip {
+    width: 71px;
+    margin: 0 2px;
+    font-size: 12px;
+  }
+}

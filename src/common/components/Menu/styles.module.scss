@@ -1,0 +1,56 @@
+@import '../../../variables/colors';
+@import '../../../variables/text';
+@import '../../../variables/screen-sizes';
+@import '../../../variables/mixins';
+
+.wrapper {
+  display: none;
+}
+
+@media (max-width: $tablet-medium) {
+  .wrapper {
+    display: block;
+    .openBtn {
+      padding-left: 25px;
+      cursor: pointer;
+    }
+    .content {
+      .currentWeatherParams,
+      .favourites,
+      .measurementSwitcher {
+        margin: 20px 0;
+        padding: 0 10px;
+        background-color: $blue-light-background;
+        h3 {
+          color: $grey-border;
+        }
+        ul {
+          list-style: none;
+          li {
+            @include sidebar-list;
+          }
+        }
+      }
+      .measurementSwitcher {
+        .measurementWrapper {
+          padding: 8px 8px 8px 32px;
+          display: flex;
+          flex-direction: row;
+          font-size: $font-size-large;
+          color: $grey-links;
+          max-width: 310px;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .switcherWrapper {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          div {
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+}

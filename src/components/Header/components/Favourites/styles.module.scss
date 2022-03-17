@@ -1,0 +1,24 @@
+@import '../../../../variables/colors';
+@import '../../../../variables/text';
+@import '../../../../variables/mixins';
+
+.container {
+  display: flex;
+}
+
+.wrapper {
+  ul {
+    list-style: none;
+    li {
+      @include sidebar-list;
+    }
+  }
+}
+
+.text {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: $font-size-medium;
+  color: $grey-links;
+  display: block;
+}

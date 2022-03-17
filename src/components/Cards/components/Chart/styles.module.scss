@@ -1,0 +1,36 @@
+@import '../../../../variables/screen-sizes';
+
+.wrapper {
+  width: 700px;
+  height: 190px;
+  padding-bottom: 10px;
+  margin: 0 auto;
+}
+
+@media (max-width: $tablet-large) {
+  .wrapper {
+    height: 220px;
+    width: 540px;
+  }
+}
+
+@media (max-width: $tablet-medium) {
+  .wrapper {
+    height: 230px;
+    width: 450px;
+  }
+}
+
+@media (max-width: $tablet-small) {
+  .wrapper {
+    height: 230px;
+    width: 370px;
+  }
+}
+
+@media (max-width: $phone) {
+  .wrapper {
+    height: 230px;
+    width: 250px;
+  }
+}

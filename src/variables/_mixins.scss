@@ -1,0 +1,28 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin sidebar-list {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: $font-size-large;
+  color: $grey-links;
+  display: block;
+  transition: 0.3s;
+  &:hover {
+    color: #f1f1f1;
+    cursor: pointer;
+  }
+}

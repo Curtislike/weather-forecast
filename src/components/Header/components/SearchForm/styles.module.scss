@@ -1,0 +1,32 @@
+@import '../../../../variables/mixins';
+@import '../../../../variables/screen-sizes';
+
+.container {
+  @include flex-row;
+  form {
+    @include flex-row;
+  }
+}
+
+.buttonSearch {
+  height: 30px;
+}
+
+@media (max-width: $tablet-medium) {
+  .container {
+    margin: 15px 10px 10px;
+  }
+}
+
+@media (max-width: $tablet-small) {
+  .container {
+    margin: 10px 7px 7px;
+  }
+}
+
+@media (max-width: $phone) {
+  .container {
+    @include flex-column;
+    align-items: center;
+  }
+}

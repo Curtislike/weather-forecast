@@ -1,0 +1,37 @@
+@import '../../../../variables/screen-sizes';
+
+.leaflet-container {
+  height: 230px;
+  width: 650px;
+  margin: 0 auto;
+  z-index: 0;
+  border-radius: 3px;
+}
+
+@media (max-width: $tablet-large) {
+  .leaflet-container {
+    height: 230px;
+    width: 550px;
+  }
+}
+
+@media (max-width: $tablet-medium) {
+  .leaflet-container {
+    height: 230px;
+    width: 450px;
+  }
+}
+
+@media (max-width: $tablet-small) {
+  .leaflet-container {
+    height: 230px;
+    width: 370px;
+  }
+}
+
+@media (max-width: $phone) {
+  .leaflet-container {
+    height: 230px;
+    width: 250px;
+  }
+}

@@ -1,0 +1,48 @@
+@import '../../../variables/colors';
+@import '../../../variables/screen-sizes';
+
+.wrapper {
+  position: relative;
+  input {
+    border-radius: 3px;
+    border-color: $blue;
+    padding: 5px;
+    margin: 0 5px;
+  }
+  .header-input {
+    width: 224px;
+  }
+  .input-compare {
+    padding: 2px;
+  }
+  .autocomplete-dropdown {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 1;
+    .suggestion-item {
+      padding: 8px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+    }
+
+    .suggestion-item-active {
+      background-color: $grey-light;
+    }
+  }
+}
+
+@media (max-width: $tablet-small) {
+  .wrapper {
+    .header-input {
+      width: 174px;
+      margin: 0 2px;
+    }
+  }
+}

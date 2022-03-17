@@ -1,0 +1,134 @@
+@import '../../variables/colors';
+@import '../../variables/text';
+@import '../../variables/mixins';
+@import '../../variables/screen-sizes';
+
+.header {
+  @include flex-row;
+  align-items: center;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  margin: 30px auto;
+  border: $blue solid 4px;
+  border-radius: 15px;
+  max-width: 1300px;
+  height: 130px;
+  .firstWrap {
+    @include flex-row;
+    align-items: center;
+    .temperatureWrap {
+      @include flex-row;
+      align-items: center;
+      padding: 0 15px;
+      img {
+        width: 80px;
+        height: 80px;
+        display: block;
+        padding: 10px;
+      }
+      .degrees {
+        font-size: $font-size-extra-large;
+        font-weight: 500;
+        width: 155px;
+      }
+    }
+    .locationWrap {
+      font-size: $font-size-large;
+      font-weight: 700;
+      padding: 0 15px;
+      .time {
+        font-size: $font-size-small;
+      }
+      .date {
+        font-size: $font-size-small;
+        color: $grey;
+        font-weight: 500;
+      }
+    }
+  }
+  .secondWrap {
+    @include flex-row;
+    align-items: center;
+  }
+  .itemParam {
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
+  }
+  .itemSettings {
+    @include flex-column;
+    justify-content: center;
+    padding: 0 30px;
+    .switcherWrap {
+      @include flex-row;
+      justify-content: space-between;
+      align-items: center;
+      width: 80px;
+    }
+    .imgWrapper {
+      @include flex-row;
+      justify-content: center;
+    }
+    .settingsImg {
+      width: 20px;
+      height: 20px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: $desktop-medium) {
+  .header {
+    flex-direction: column;
+    height: 180px;
+    .firstWrap {
+      margin-top: 10px;
+      .temperatureWrap {
+        img {
+          width: 35px;
+          height: 35px;
+        }
+        .degrees {
+          font-size: $font-size-large;
+          font-weight: 700;
+          width: 30px;
+        }
+      }
+    }
+    .secondWrap {
+      margin-bottom: 10px;
+      .itemSettings {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-medium) {
+  .header {
+    height: 140px;
+    justify-content: center;
+    .secondWrap {
+      margin-bottom: 0;
+      .itemSettings {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $phone) {
+  .header {
+    height: 175px;
+    .firstWrap {
+      .temperatureWrap {
+        padding: 5px;
+      }
+      .locationWrap {
+        padding: 0 5px;
+        font-size: $font-size-small;
+      }
+    }
+  }
+}

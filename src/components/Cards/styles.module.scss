@@ -1,0 +1,102 @@
+@import '../../variables/colors';
+@import '../../variables/text';
+@import '../../variables/screen-sizes';
+@import '../../variables/mixins';
+
+.card {
+  max-width: 800px;
+  height: 340px;
+  border: 1px solid $grey-border;
+  border-radius: 15px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.01);
+  margin: 25px auto;
+  cursor: pointer;
+  @include flex-column;
+  justify-content: space-between;
+  background-color: white;
+  .cardHeaderWrap {
+    margin: 5px 20px;
+    border-bottom: 1px solid $grey;
+    @include flex-row;
+    justify-content: space-between;
+    align-items: center;
+    .cardHeaderInfo {
+      @include flex-row;
+      align-items: center;
+      .location {
+        font-size: $font-size-medium;
+        color: $grey;
+        padding: 5px 10px;
+      }
+      .temperature {
+        font-size: $font-size-medium;
+        color: $grey;
+        padding: 5px;
+      }
+    }
+    .cardHeaderOptions {
+      @include flex-row;
+      align-items: center;
+      .time {
+        font-size: $font-size-medium;
+        color: $grey;
+        padding: 5px 10px;
+      }
+    }
+  }
+  .buttons {
+    @include flex-row;
+    justify-content: flex-end;
+    padding: 10px 20px 20px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: $tablet-large) {
+  .card {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: $tablet-medium) {
+  .card {
+    .cardHeaderWrap {
+      margin: 2px 20px;
+      .cardHeaderInfo {
+        .location,
+        .temperature {
+          font-size: $font-size-small;
+          padding: 2px 5px;
+        }
+      }
+      .cardHeaderOptions {
+        .time {
+          font-size: $font-size-small;
+          padding: 2px 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $phone) {
+  .card {
+    .cardHeaderWrap {
+      margin: 2px 15px;
+      .cardHeaderInfo {
+        .location,
+        .temperature {
+          font-size: $font-size-extra-small;
+        }
+      }
+      .cardHeaderOptions {
+        .time {
+          font-size: $font-size-extra-small;
+        }
+      }
+    }
+    .buttons {
+      padding: 10px 15px 15px;
+    }
+  }
+}

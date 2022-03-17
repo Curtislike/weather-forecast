@@ -1,0 +1,5 @@
+export const ADD_NEW_CARD_PENDING = 'ADD_NEW_CARD_PENDING';
+export const ADD_NEW_CARD_SUCCESS = 'ADD_NEW_CARD_SUCCESS';
+export const REMOVE_CARD = 'REMOVE_CARD';
+export const CARD_ERROR = 'CARD_ERROR';
+export const DRAG_CARD = 'DRAG_CARD';

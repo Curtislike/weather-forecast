@@ -1,0 +1,47 @@
+@import '../../../../variables/colors';
+@import '../../../../variables/text';
+@import '../../../../variables/mixins';
+@import '../../../../variables/screen-sizes';
+
+.paramsWrapper {
+  @include flex-row;
+  justify-content: space-between;
+  margin: 10px 0;
+  .param {
+    @include flex-column;
+    align-items: center;
+    min-width: 120px;
+    .name {
+      font-size: $font-size-medium;
+      color: $grey;
+      width: 120px;
+      text-align: center;
+      border-bottom: 1px solid $grey;
+      padding: 0 0 5px;
+    }
+    .value {
+      font-size: $font-size-medium;
+      color: $grey;
+      padding: 5px 0 0;
+    }
+  }
+}
+
+@media (max-width: $desktop-medium) {
+  .paramsWrapper {
+    .params {
+      .param {
+        font-size: $font-size-small;
+      }
+      .value {
+        font-size: $font-size-small;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-medium) {
+  .paramsWrapper {
+    display: none;
+  }
+}

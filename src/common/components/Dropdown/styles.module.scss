@@ -1,0 +1,58 @@
+@import '../../../variables/colors';
+@import '../../../variables/text';
+@import '../../../variables/screen-sizes';
+
+.dropdown {
+  width: 125px;
+  margin: 0 5px;
+  position: relative;
+  .btn {
+    padding: 6px 15px 10px;
+    background: $blue;
+    font-size: $font-size-medium;
+    line-height: $font-size-medium;
+    border-radius: 5px;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    .arrowDown {
+      border: solid rgb(255, 255, 255);
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+      transform: rotate(45deg);
+    }
+  }
+  .content {
+    position: absolute;
+    top: 85%;
+    left: 0;
+    width: 100%;
+    background: $blue;
+    color: $white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    .item {
+      padding: 6px 15px;
+      font-size: $font-size-medium;
+      transition: all 0.2s;
+      cursor: pointer;
+      &:hover {
+        background: $blue-dark;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: $phone) {
+  .dropdown {
+    width: 240px;
+    margin: 10px 0px;
+  }
+  .btn {
+    font-size: $font-size-small;
+  }
+}

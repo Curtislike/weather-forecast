@@ -1,0 +1,14 @@
+@import '../../../variables/colors';
+
+.favouriteButton {
+  padding: 5px;
+  border: none;
+  background-color: $white;
+  background: transparent;
+  cursor: pointer;
+  align-items: center;
+  img {
+    vertical-align: middle;
+    padding: 0;
+  }
+}
